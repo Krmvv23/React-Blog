@@ -1,0 +1,271 @@
+body
+  margin: 0
+  box-sizing: border-box
+  background-color: #f2f2f2
+
+*
+  font-family: monospace !important
+
+$gradient: linear-gradient(0deg, rgb(142, 199, 231), rgb(228, 145, 145))
+
+#root
+  height: 100%
+  position: relative
+
+button:focus
+  box-shadow: none !important
+
+.selectCategory
+  position: sticky
+  top: 10px
+  button
+    font-weight: bold
+    font-size: 15px
+  .active
+    background: #000
+    color: #fff
+
+.App
+  height: 100%
+
+.body-area
+  min-height: 638px !important
+
+.logo
+  height: 100px
+
+.control-dots
+  display: none
+
+.navBar
+  li
+    position: relative
+    margin-right: 30px
+    font-size: 18px
+    overflow: hidden
+    padding: 10px 10px
+    a
+      color: #000
+    &::after
+      content: ''
+      position: absolute
+      height: 5px
+      width: 100%
+      bottom: 0px
+      left: 0
+      background-color: #000
+      transform: translateX(-110%)
+      transition: all .5s cubic-bezier(0.68, -0.55, 0.265, 1.55) !important
+
+    &:hover::after
+      transform: translateX(0%) !important
+
+.Login
+  position: fixed
+  inset: 0 0 0 0
+  z-index: 1024
+  height: 100%
+  background: $gradient
+
+  .form
+    width: 270px
+
+  .loginLogo
+    height: 60px
+
+.carousel
+  overflow: hidden
+  *
+    transition: all 2s cubic-bezier(0.68, -0.55, 0.265, 1.55) !important
+    overflow: unset !important
+
+  .slick-slide
+    padding: 0 90px
+
+  .slick-active
+    transform: scale(1.1, 1.1) !important
+    z-index: 2
+
+  .carouselItem
+    position: relative
+
+    img
+      height: 600px !important
+      box-shadow: 5px 5px 5px 1px lightgray
+
+    h2
+      position: absolute
+      bottom: 0%
+      left: 0%
+      right: 0%
+      color: #fff
+      background-color: rgba(0, 0, 0, 0.324)
+      padding: 25px 30px
+      text-transform: capitalize
+      backdrop-filter: blur(5px)
+      border-radius: 5px
+      text-align: left
+
+  .slick-next
+    right: 10px !important
+    z-index: 3
+
+  .slick-prev
+    left: 10px !important
+    z-index: 3
+
+  .slick-next:before, .slick-prev:before
+    color: #000 !important
+    font-size: 20px
+
+.homeabout
+  height: 450px !important
+
+.cardImg
+  width: 200px !important
+
+.postCard
+  height: 300px
+  width: 100%
+  box-shadow: -5px 5px 10px 1px rgba(51, 51, 51, 0.35)
+
+  img
+    width: 100%
+    height: 100%
+    object-fit: cover
+    object-position: center
+
+  .cardTxt
+    text-overflow: ellipsis
+
+  &>*
+    overflow-wrap: anywhere
+
+  .cbt
+    top: 0
+    bottom: 0
+    left: 10%
+    right: 10%
+    background-color: rgba(255, 255, 255, 0.886)
+
+.tags
+  padding: 10px 20px
+  border: 1px solid black
+  margin: 0 10px 10px 0
+  color: black
+  text-transform: uppercase
+  transition: all .5s
+
+.tags:hover
+  color: #fff
+  background-color: black
+
+.read-more
+  color: black
+  padding: 20px 30px
+  box-shadow: 1px 1px 10px 1px lightgray
+  text-transform: uppercase
+  transition: all .5s
+
+.read-more:hover
+  color: #fff
+  background-color: #000
+
+.card-column
+  z-index: 1
+  .card-img
+    width: auto
+
+.profRight
+  z-index: 1
+  background-color: #f2f2f2
+
+.headProf
+  .headProf-subtitle
+    position: absolute
+    list-style: unset
+    background-color: #fff
+    bottom: -120px
+    right: 0
+    left: 0
+    padding: 10px 0
+    min-width: 105px
+    z-index: 10
+
+    ul
+      transition: all .5s
+      li
+        a
+          color: #000
+
+      li:hover,
+      li:hover a
+        background-color: #000
+        color: #fff
+        cursor: pointer
+  .profImg
+    height: 45px
+    width: 45px
+.backdrop
+  position: fixed
+  top: 0
+  bottom: 0
+  left: 0
+  right: 0
+  z-index: 10
+  background-color: rgba(0, 0, 0, 0.516)
+  backdrop-filter: blur(10px)
+
+.postTitleInp
+  text-transform: capitalize
+
+.postTitleInp:focus
+  outline: none
+
+.ck-content
+  min-height: 200px
+
+.feature-img
+  height: auto
+  width: 500px
+
+.feature-img-inp::-webkit-file-upload-button
+  display: none
+
+.profLeft
+  .profImg
+    border-radius: 50%
+    width: 150px
+    height: auto
+
+.latestPost-Title
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  background-color: rgba(0, 0, 0, 0.568)
+  color: #fff
+  padding: 10px
+  font-weight: bold
+
+.latestPost
+  height: 200px
+
+.latestPost-Img img
+  object-fit: cover !important
+  object-position: center !important
+  min-width: 100% !important
+
+.post-img
+  width: 100%
+  // overflow: hidden !important
+
+.post-img img
+  object-fit: contain
+  object-position: center
+
+.contact
+  resize: both !important
+
+.contact-textarea
+  height: 200px
